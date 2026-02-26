@@ -2,23 +2,27 @@
 
 ## Cursor Cloud specific instructions
 
-This is a **documentation-only repository** — a curated collection of AI project analyses written in Markdown. There is no source code, no backend/frontend services, no databases, and no automated test suites.
+这是一个**纯文档仓库**（"每天了解一个AI项目"），包含 AI 项目分析文章，无源代码。
 
-### Project structure
+### 目录结构
 
-- Root-level `*.md` files: analyses of AI projects (Browser-Use, ClawdBot, DeepDiagram, FlashMLA, etc.)
-- `docs/`: additional project analyses organized in subdirectories (FossFLOW, GitNexus, graphiti, nanobot, pentagi, whatsapp-web.js, etc.)
-- `compare/`: comparison articles (e.g., Pathway vs Kafka, PostgreSQL vs Redis)
-- Each project typically has three analysis files: 介绍 (introduction), 架构 (architecture with Mermaid diagrams), 提示词 (prompt analysis)
+- `docs/项目名/` — 每个项目一个子目录，包含三种分析文档：
+  - `项目名-介绍.md` — Why-What-How 介绍
+  - `项目名-架构.md` — Mermaid 架构图分析
+  - `项目名-提示词.md` — Prompt 提示词分析
+- `docs/compare/` — 项目对比文章
+- `docs/index.md` — MkDocs 站点首页
+- `README.md` — 项目总览及目录索引
 
-### Development tools
+### 开发工具
 
-- **Linting:** `markdownlint '*.md' 'docs/**/*.md' 'compare/**/*.md'` — reports Markdown style issues (the existing docs have many lint warnings; this is pre-existing).
-- **Preview site:** `mkdocs serve --dev-addr 0.0.0.0:8000` — serves the docs at http://localhost:8000 with Mermaid diagram rendering via MkDocs Material theme. Config is in `mkdocs.yml`.
-- **Build static site:** `mkdocs build` — outputs to `_site/`.
+- **Lint:** `markdownlint 'docs/**/*.md'`
+- **预览站点:** `mkdocs serve --dev-addr 0.0.0.0:8000` — http://localhost:8000，Mermaid 图自动渲染
+- **构建静态站点:** `mkdocs build` — 输出到 `_site/`
 
-### Gotchas
+### 添加新项目
 
-- The MkDocs setup uses a `site_content/` directory containing symlinks to the root-level and `docs/`/`compare/` Markdown files, because MkDocs requires `docs_dir` to be a child of the config file location.
-- Markdown files contain Chinese content; make sure editors/tools support UTF-8.
-- Many Markdown files contain Mermaid diagram blocks (` ```mermaid `) — the MkDocs Material theme renders these natively.
+1. 创建 `docs/项目名/` 目录
+2. 添加 `项目名-介绍.md`、`项目名-架构.md`、`项目名-提示词.md`
+3. 在 `mkdocs.yml` 的 `nav` 部分添加对应条目
+4. 在 `README.md` 的项目表格中添加一行
