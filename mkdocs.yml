@@ -1,0 +1,122 @@
+site_name: 每天了解一个AI项目
+site_description: AI项目分析知识库
+docs_dir: docs
+site_dir: _site
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 项目分析:
+    - Browser-Use:
+      - 介绍: Browser-Use/Browser-Use-介绍.md
+      - 架构: Browser-Use/Browser-Use-架构.md
+      - 提示词: Browser-Use/Browser-Use-提示词.md
+    - Clawdbot:
+      - 介绍: Clawdbot/Clawdbot-介绍.md
+      - 架构: Clawdbot/Clawdbot-架构.md
+      - 提示词: Clawdbot/Clawdbot-提示词.md
+    - DataScienceForBeginners:
+      - 介绍: DataScienceForBeginners/DataScienceForBeginners-介绍.md
+      - 架构: DataScienceForBeginners/DataScienceForBeginners-架构.md
+    - DeepDiagram:
+      - 介绍: DeepDiagram/DeepDiagram-介绍.md
+      - 架构: DeepDiagram/DeepDiagram-架构.md
+      - 提示词: DeepDiagram/DeepDiagram-提示词.md
+    - dexter:
+      - 介绍: dexter/dexter-介绍.md
+      - 架构: dexter/dexter-架构.md
+      - 提示词: dexter/dexter-提示词.md
+    - FlashMLA:
+      - 介绍: FlashMLA/FlashMLA-介绍.md
+      - 架构: FlashMLA/FlashMLA-架构.md
+      - 提示词: FlashMLA/FlashMLA-提示词.md
+    - FossFLOW:
+      - 介绍: FossFLOW/FossFLOW-介绍.md
+      - 架构: FossFLOW/FossFLOW-架构.md
+      - 提示词: FossFLOW/FossFLOW-提示词.md
+    - GitNexus:
+      - 介绍: GitNexus/GitNexus-介绍.md
+      - 架构: GitNexus/GitNexus-架构.md
+      - 提示词: GitNexus/GitNexus-提示词.md
+    - graphiti:
+      - 介绍: graphiti/graphiti-介绍.md
+      - 架构: graphiti/graphiti-架构.md
+      - 提示词: graphiti/graphiti-提示词.md
+    - langextract:
+      - 介绍: langextract/langextract-介绍.md
+      - 架构: langextract/langextract-架构.md
+      - 提示词: langextract/langextract-提示词.md
+    - Memos:
+      - 介绍: Memos/Memos-介绍.md
+      - 架构: Memos/Memos-架构.md
+      - 提示词: Memos/Memos-提示词.md
+    - nanobot:
+      - 介绍: nanobot/nanobot-介绍.md
+      - 架构: nanobot/nanobot-架构.md
+      - 提示词: nanobot/nanobot-提示词.md
+    - openclaw:
+      - 介绍: openclaw/openclaw-介绍.md
+      - 架构: openclaw/openclaw-架构.md
+      - 提示词: openclaw/openclaw-提示词.md
+    - pathway:
+      - 介绍: pathway/pathway-介绍.md
+    - pentagi:
+      - 介绍: pentagi/pentagi-介绍.md
+      - 架构: pentagi/pentagi-架构.md
+      - 提示词: pentagi/pentagi-提示词.md
+    - Personal_AI_Infrastructure:
+      - 介绍: Personal_AI_Infrastructure/Personal_AI_Infrastructure-介绍.md
+      - 架构: Personal_AI_Infrastructure/Personal_AI_Infrastructure-架构.md
+      - 提示词: Personal_AI_Infrastructure/Personal_AI_Infrastructure-提示词.md
+    - skills:
+      - 介绍: skills/skills-介绍.md
+      - 架构: skills/skills-架构.md
+      - 提示词: skills/skills-提示词.md
+    - SuperMemory:
+      - 介绍: SuperMemory/SuperMemory-介绍.md
+      - 架构: SuperMemory/SuperMemory-架构.md
+      - 提示词: SuperMemory/SuperMemory-提示词.md
+    - Superpowers:
+      - 介绍: Superpowers/Superpowers-介绍.md
+      - 架构: Superpowers/Superpowers-架构.md
+      - 提示词: Superpowers/Superpowers-提示词.md
+    - system_prompts_leaks:
+      - 介绍: system_prompts_leaks/system_prompts_leaks-介绍.md
+      - 架构: system_prompts_leaks/system_prompts_leaks-架构.md
+      - 提示词: system_prompts_leaks/system_prompts_leaks-提示词.md
+    - vibetunnel:
+      - 介绍: vibetunnel/vibetunnel-介绍.md
+      - 架构: vibetunnel/vibetunnel-架构.md
+      - 提示词: vibetunnel/vibetunnel-提示词.md
+    - whatsapp-web.js:
+      - 介绍: whatsapp-web.js/whatsapp-web.js-介绍.md
+      - 架构: whatsapp-web.js/whatsapp-web.js-架构.md
+      - 提示词: whatsapp-web.js/whatsapp-web.js-提示词.md
+  - 对比分析:
+    - Pathway vs Kafka: compare/pathway-vs-kafka.md
+    - PostgreSQL vs Redis: compare/postgre-vs-redis.md
